@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
-# Regenerates cv_es.pdf and cv_en.pdf from index.html using headless Chrome.
+# Regenerates the downloadable CV PDFs from index.html using headless Chrome.
 # Run this after editing the CV content in index.html.
 set -euo pipefail
 
 CV_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PORT=8799
 CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)"
+PDF_ES="$CV_DIR/CV_Francisco_Hidalgo_Ruiz_es.pdf"
+PDF_EN="$CV_DIR/CV_Francisco_Hidalgo_Ruiz_en.pdf"
 
 if [ -z "$CHROME" ]; then
   echo "No se ha encontrado Chrome/Chromium instalado." >&2
@@ -25,14 +27,14 @@ for i in $(seq 1 20); do
   sleep 0.2
 done
 
-echo "Generando cv_es.pdf..."
+echo "Generando $(basename "$PDF_ES")..."
 "$CHROME" --headless --disable-gpu --no-pdf-header-footer \
-  --print-to-pdf="$CV_DIR/cv_es.pdf" \
+  --print-to-pdf="$PDF_ES" \
   "http://127.0.0.1:$PORT/index.html?lang=es"
 
-echo "Generando cv_en.pdf..."
+echo "Generando $(basename "$PDF_EN")..."
 "$CHROME" --headless --disable-gpu --no-pdf-header-footer \
-  --print-to-pdf="$CV_DIR/cv_en.pdf" \
+  --print-to-pdf="$PDF_EN" \
   "http://127.0.0.1:$PORT/index.html?lang=en"
 
-echo "Listo: $CV_DIR/cv_es.pdf y $CV_DIR/cv_en.pdf"
+echo "Listo: $PDF_ES y $PDF_EN"

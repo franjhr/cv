@@ -544,8 +544,9 @@
     document.getElementById('heroPhoto').hidden = (lang !== 'es');
 
     var dl = document.getElementById('btn-download');
-    dl.href = lang === 'es' ? 'cv_es.pdf' : 'cv_en.pdf';
-    dl.setAttribute('download', lang === 'es' ? 'CV_Francisco_Hidalgo_Ruiz_es.pdf' : 'CV_Francisco_Hidalgo_Ruiz_en.pdf');
+    var pdfName = lang === 'es' ? 'CV_Francisco_Hidalgo_Ruiz_es.pdf' : 'CV_Francisco_Hidalgo_Ruiz_en.pdf';
+    dl.href = pdfName;
+    dl.setAttribute('download', pdfName);
   }
 
   var params = new URLSearchParams(window.location.search);
