@@ -1,0 +1,551 @@
+<title>Francisco Hidalgo — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FFFFFF;
+    --surface: #F6F8F8;
+    --ink: #191D1E;
+    --ink-muted: #5B6265;
+    --ink-faint: #8B9194;
+    --accent: #0E7C7B;
+    --accent-soft: #E1F3F2;
+    --accent-ink: #0B5F5E;
+    --border: #E6E7E4;
+    --shadow: 0 1px 2px rgba(25,29,30,0.04), 0 8px 24px rgba(25,29,30,0.05);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    margin:0;
+    padding-inline: 20px;
+    line-height:1.55;
+  }
+  .mono{ font-family:'JetBrains Mono', ui-monospace, SFMono-Regular, monospace; }
+
+  a{ color: var(--accent-ink); text-decoration-color: var(--accent-soft); text-underline-offset:2px; }
+  a:hover{ text-decoration-color: currentColor; }
+
+  .topbar{
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 14px 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .topbar-name{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+  .controls{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+
+  .langswitch{
+    display:inline-flex;
+    border:1px solid var(--border);
+    border-radius:999px;
+    padding:3px;
+    background: var(--surface);
+    gap:2px;
+  }
+  .langswitch button{
+    all:unset;
+    cursor:pointer;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    padding:5px 12px;
+    border-radius:999px;
+    color: var(--ink-muted);
+  }
+  .langswitch button[aria-pressed="true"]{
+    background: var(--accent);
+    color: #FBEFEF;
+  }
+
+  .btn-download{
+    all:unset;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.03em;
+    padding:8px 14px;
+    border-radius:8px;
+    background: var(--ink);
+    color: var(--bg);
+    box-shadow: var(--shadow);
+  }
+  .btn-download:hover{ opacity:0.9; }
+  .btn-download svg{ width:13px; height:13px; }
+
+  main{ max-width: 780px; margin: 0 auto; padding-block: 36px 80px; font-size: 1.0625rem; }
+
+  header.hero{ margin-bottom: 40px; display:flex; gap:22px; align-items:flex-start; }
+  .hero-photo{
+    flex:none;
+    width:104px; height:104px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid var(--border);
+    background: var(--accent-soft);
+    box-shadow: var(--shadow);
+  }
+  .hero-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .hero-text{ flex:1 1 auto; min-width:0; }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size: clamp(2.1rem, 5vw, 2.75rem);
+    margin: 0 0 8px 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  .role-line{
+    font-family:'JetBrains Mono', monospace;
+    color: var(--accent-ink);
+    font-size: 1.08rem;
+    margin: 0 0 16px 0;
+  }
+  .meta-row{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--ink-muted);
+    display:flex;
+    flex-wrap:wrap;
+    gap: 6px 10px;
+  }
+  .meta-row span:not(:last-child)::after{ content:"·"; margin-left:10px; color: var(--ink-faint); }
+
+  section{ margin-bottom: 46px; }
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'JetBrains Mono', monospace;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.86rem;
+    color: var(--ink);
+    margin: 0 0 20px 0;
+    padding-bottom:10px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .section-title::before{
+    content:"";
+    width:8px; height:8px;
+    border-radius:2px;
+    background: var(--accent);
+    flex:none;
+  }
+  .summary{ font-size:1.12rem; color: var(--ink); }
+
+  .job{
+    position:relative;
+    padding-left: 22px;
+    border-left: 2px solid var(--border);
+    padding-bottom: 28px;
+  }
+  .job:last-child{ padding-bottom:0; }
+  .job::before{
+    content:"";
+    position:absolute;
+    left:-6px; top:5px;
+    width:10px; height:10px;
+    border-radius:50%;
+    background: var(--accent);
+  }
+  .job-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap: 4px 14px;
+    margin-bottom:8px;
+  }
+  .job-title{ font-weight:600; font-size:1.12rem; }
+  .job-company{ color: var(--accent-ink); font-weight:600; }
+  .job-dates{ font-family:'JetBrains Mono', monospace; font-size:0.85rem; color: var(--ink-faint); white-space:nowrap; }
+  .job ul{ margin: 10px 0 0 0; padding-left: 1.15em; }
+  .job li{ margin-bottom: 7px; }
+  .job li::marker{ color: var(--ink-faint); }
+
+  .edu-item{ margin-bottom: 16px; }
+  .edu-item:last-child{ margin-bottom:0; }
+  .edu-degree{ font-weight:600; font-size:1.05rem; }
+  .edu-meta{ font-family:'JetBrains Mono', monospace; font-size:0.85rem; color: var(--ink-faint); }
+  .edu-detail{ color: var(--ink-muted); font-size:1rem; margin-top:3px; }
+
+  .skills-grid{ display:flex; flex-direction:column; gap:18px; }
+  .skill-group-label{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.8rem;
+    text-transform:uppercase;
+    letter-spacing:0.07em;
+    color: var(--ink-muted);
+    margin-bottom:9px;
+  }
+  .chips{ display:flex; flex-wrap:wrap; gap:9px; }
+  .chip{
+    font-size:0.94rem;
+    padding: 6px 12px;
+    border-radius:7px;
+    background: var(--surface);
+    border:1px solid var(--border);
+    color: var(--ink);
+  }
+  .ai-block{
+    border: 1px solid var(--accent-soft);
+    background: var(--accent-soft);
+    border-radius:12px;
+    padding: 16px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    font-size:1rem;
+  }
+  .ai-item{ display:flex; gap:10px; align-items:flex-start; }
+  .ai-item .dot{
+    flex:none; width:6px; height:6px; border-radius:50%;
+    background: var(--accent); margin-top:9px;
+  }
+  .ai-item b{ color: var(--accent-ink); }
+
+  .langs{ display:flex; gap: 28px; flex-wrap:wrap; font-size:1.05rem; }
+  .lang-item .lvl{ color: var(--ink-muted); font-size:0.95rem; }
+
+  footer{
+    max-width:780px; margin:0 auto; padding-block: 20px 40px;
+    font-family:'JetBrains Mono', monospace; font-size:0.82rem; color: var(--ink-faint);
+    border-top:1px solid var(--border);
+  }
+
+  @media (max-width: 480px){
+    .job-head{ flex-direction:column; align-items:flex-start; }
+    header.hero{ flex-direction:column; align-items:flex-start; gap:16px; }
+  }
+
+  @media print{
+    body{ background:#fff; color:#111; padding-inline:0; }
+    .topbar{ display:none; }
+    main{ padding-block: 0; max-width:100%; }
+    .job{ break-inside: avoid; }
+    a{ color:#111; }
+    .ai-block{ background:#E6F4F3; border-color:#BFE3E1; }
+  }
+</style>
+
+<div class="topbar">
+  <div class="topbar-name mono" id="topbarName">Francisco J. Hidalgo Ruiz</div>
+  <div class="controls">
+    <div class="langswitch" role="group" aria-label="Language">
+      <button id="btn-es" aria-pressed="true">ES</button>
+      <button id="btn-en" aria-pressed="false">EN</button>
+    </div>
+    <button class="btn-download" id="btn-print">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+      <span id="dlLabel">PDF</span>
+    </button>
+  </div>
+</div>
+
+<main>
+  <header class="hero">
+    <div class="hero-photo" id="heroPhoto">
+      <img id="photoImg" alt="Francisco Javier Hidalgo Ruiz" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 104 104'%3E%3Crect width='104' height='104' fill='%23E1F3F2'/%3E%3Ctext x='52' y='63' font-family='JetBrains Mono, monospace' font-size='34' font-weight='600' fill='%230B5F5E' text-anchor='middle'%3EFH%3C/text%3E%3C/svg%3E">
+    </div>
+    <div class="hero-text">
+      <h1>Francisco Javier Hidalgo Ruiz</h1>
+      <p class="role-line" id="roleLine">Senior Backend Developer</p>
+      <div class="meta-row">
+        <span id="metaLocation">Granada, España</span>
+        <span>franjhr@gmail.com</span>
+        <span id="metaPhone">647 519 804</span>
+        <span><a href="https://linkedin.com/in/franjhr" target="_blank" rel="noopener">linkedin.com/in/franjhr</a></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title" id="lblSummary">Perfil profesional</h2>
+    <p class="summary" id="summaryText"></p>
+  </section>
+
+  <section>
+    <h2 class="section-title" id="lblExperience">Experiencia profesional</h2>
+    <div id="experienceList"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title" id="lblEducation">Formación</h2>
+    <div id="educationList"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title" id="lblSkills">Aptitudes técnicas</h2>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </section>
+
+  <section>
+    <h2 class="section-title" id="lblLanguages">Idiomas</h2>
+    <div class="langs" id="langsList"></div>
+  </section>
+</main>
+
+<footer>
+  <span id="footerNote">CV generado y mantenido con Claude Code — franjhr.github.io/cv</span>
+</footer>
+
+<script>
+(function(){
+  var DATA = {
+    es: {
+      role: "Senior Backend Developer",
+      location: "Granada, España",
+      phone: "647 519 804",
+      lblSummary: "Perfil profesional",
+      lblExperience: "Experiencia profesional",
+      lblEducation: "Formación",
+      lblSkills: "Aptitudes técnicas",
+      lblLanguages: "Idiomas",
+      dlLabel: "Descargar PDF",
+      footer: "CV generado y mantenido con Claude Code — franjhr.github.io/cv",
+      summary: "Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Actualmente Senior Backend Developer en Bizneo HR Solutions, donde combino desarrollo, diseño de funcionalidad, revisión de código y mentoring, coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega.",
+      experience: [
+        {
+          title: "Senior Backend Developer",
+          company: "Bizneo HR Solutions",
+          dates: "jul. 2017 — actualidad",
+          bullets: [
+            "Desarrollo backend en Ruby on Rails de un ATS (plataforma de gestión de procesos de selección); diseño de funcionalidad, revisión de código y mentoring dentro de un equipo de 10 desarrolladores.",
+            "Coordinación del equipo de soporte y mantenimiento de la aplicación.",
+            "Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Memcached, Docker, tests automatizados y CI, HTML/CSS, JavaScript, React."
+          ],
+          ai: [
+            { label: "Amazon Bedrock", text: "integración de IA generativa en el producto (matching de candidatos, generación de contenido, chatbot conversacional, resumen automático de CVs)." },
+            { label: "Claude Code", text: "adopción de IA generativa en el flujo de desarrollo diario, acelerando diseño de funcionalidad, revisión de código y resolución de incidencias." }
+          ]
+        },
+        {
+          title: "Analyst | Senior Developer",
+          company: "NGA Human Resources",
+          dates: "sept. 2015 — jul. 2017",
+          bullets: [ "Análisis y desarrollo de aplicaciones web con Ruby on Rails, MySQL, JavaScript, HTML, CSS." ]
+        },
+        {
+          title: "Analyst | Developer",
+          company: "Razorfish | Healthware",
+          dates: "oct. 2012 — sept. 2015",
+          bullets: [
+            "Desarrollo de aplicaciones web mediante TDD (Ruby on Rails, MySQL, HTML+CSS, JavaScript) para clientes como Axa y Médicos del Mundo.",
+            "Desarrollo de aplicaciones móviles para iOS y Android orientadas a salud (seguimiento de trastorno bipolar y diabetes tipo 1/2)."
+          ]
+        },
+        {
+          title: "Analyst | Developer",
+          company: "Nuatt (Publicis Healthcare Communications Group)",
+          dates: "mar. 2012 — oct. 2012",
+          bullets: [ "Desarrollo de aplicaciones web mediante TDD (Ruby on Rails, MySQL, HTML+CSS, JavaScript)." ]
+        },
+        {
+          title: "Coordinador del departamento técnico",
+          company: "Virtual Solutions & Artificial Intelligence S.L.",
+          dates: "may. 2009 — dic. 2011",
+          bullets: [
+            "Coordinación del departamento técnico; diseño y desarrollo de portales web (Python, Django, JSP) para clientes como la Universidad de Granada.",
+            "Participación en proyectos I+D+I: INTERFAQ (Junta de Andalucía) y Plan Avanza Competitividad (sistema de vigilancia epidemiológica)."
+          ]
+        }
+      ],
+      education: [
+        { degree: "Ingeniería Informática (Licenciatura)", meta: "Universidad de Granada · 2007–2009", detail: "Proyecto fin de carrera: plataforma web de gestión de clubes deportivos (Python/Django) — Matrícula de Honor." },
+        { degree: "Ingeniería Técnica en Informática de Sistemas (Diplomatura)", meta: "Universidad de Granada · 2003–2007", detail: "" },
+        { degree: "Certificado de Aptitud Pedagógica (CAP)", meta: "Universidad de Granada · 2009", detail: "" }
+      ],
+      skillGroups: [
+        { label: "Lenguajes y frameworks", items: ["Ruby on Rails","JavaScript","React","HTML5 / CSS3"] },
+        { label: "Datos e infraestructura", items: ["PostgreSQL","Elasticsearch","Redis / Sidekiq","Memcached","Docker"] },
+        { label: "Metodología y calidad", items: ["TDD","Tests automatizados","Integración continua (CI)","Git","Revisión de código"] },
+        { label: "Liderazgo técnico", items: ["Mentoring","Diseño de funcionalidad","Coordinación de equipo"] }
+      ],
+      languages: [ { name: "Español", level: "Nativo" }, { name: "Inglés", level: "Intermedio" } ]
+    },
+    en: {
+      role: "Senior Backend Developer",
+      location: "Granada, Spain",
+      phone: "+34 647 519 804",
+      lblSummary: "Professional Summary",
+      lblExperience: "Professional Experience",
+      lblEducation: "Education",
+      lblSkills: "Technical Skills",
+      lblLanguages: "Languages",
+      dlLabel: "Download PDF",
+      footer: "CV built and maintained with Claude Code — franjhr.github.io/cv",
+      summary: "Software engineer with 15+ years of experience in web development, specialized in Ruby on Rails. Currently Senior Backend Developer at Bizneo HR Solutions, combining development, feature design, code review, and mentoring while coordinating the application's support and maintenance team. Actively integrates AI tools into the development workflow to improve delivery quality and speed.",
+      experience: [
+        {
+          title: "Senior Backend Developer",
+          company: "Bizneo HR Solutions",
+          dates: "Jul 2017 — Present",
+          bullets: [
+            "Backend development in Ruby on Rails for an ATS (applicant tracking system); feature design, code review, and mentoring within a team of 10 developers.",
+            "Coordination of the application's support and maintenance team.",
+            "Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Memcached, Docker, automated testing and CI, HTML/CSS, JavaScript, React."
+          ],
+          ai: [
+            { label: "Amazon Bedrock", text: "generative AI integration in production (candidate matching, content generation, conversational chatbot, automatic CV summarization)." },
+            { label: "Claude Code", text: "generative AI adopted in the daily development workflow, speeding up feature design, code review, and issue resolution." }
+          ]
+        },
+        {
+          title: "Analyst | Senior Developer",
+          company: "NGA Human Resources",
+          dates: "Sep 2015 — Jul 2017",
+          bullets: [ "Analysis and development of web applications with Ruby on Rails, MySQL, JavaScript, HTML, CSS." ]
+        },
+        {
+          title: "Analyst | Developer",
+          company: "Razorfish | Healthware",
+          dates: "Oct 2012 — Sep 2015",
+          bullets: [
+            "Development of web applications using TDD (Ruby on Rails, MySQL, HTML+CSS, JavaScript) for clients including Axa and Médicos del Mundo.",
+            "Development of health-focused iOS and Android mobile apps (bipolar disorder and type 1/2 diabetes tracking)."
+          ]
+        },
+        {
+          title: "Analyst | Developer",
+          company: "Nuatt (Publicis Healthcare Communications Group)",
+          dates: "Mar 2012 — Oct 2012",
+          bullets: [ "Development of web applications using TDD (Ruby on Rails, MySQL, HTML+CSS, JavaScript)." ]
+        },
+        {
+          title: "Technical Department Coordinator",
+          company: "Virtual Solutions & Artificial Intelligence S.L.",
+          dates: "May 2009 — Dec 2011",
+          bullets: [
+            "Coordination of the technical department; design and development of web portals (Python, Django, JSP) for clients including the University of Granada.",
+            "Participation in R&D&I projects: INTERFAQ (Junta de Andalucía) and Plan Avanza Competitividad (epidemiological surveillance system)."
+          ]
+        }
+      ],
+      education: [
+        { degree: "Computer Engineering (BSc/MSc equivalent)", meta: "University of Granada · 2007–2009", detail: "Final project: web platform for sports club management (Python/Django) — Highest Honors." },
+        { degree: "Technical Engineering in Computer Systems", meta: "University of Granada · 2003–2007", detail: "" },
+        { degree: "Teaching Certificate (CAP)", meta: "University of Granada · 2009", detail: "" }
+      ],
+      skillGroups: [
+        { label: "Languages & frameworks", items: ["Ruby on Rails","JavaScript","React","HTML5 / CSS3"] },
+        { label: "Data & infrastructure", items: ["PostgreSQL","Elasticsearch","Redis / Sidekiq","Memcached","Docker"] },
+        { label: "Methodology & quality", items: ["TDD","Automated testing","Continuous Integration (CI)","Git","Code review"] },
+        { label: "Technical leadership", items: ["Mentoring","Feature design","Team coordination"] }
+      ],
+      languages: [ { name: "Spanish", level: "Native" }, { name: "English", level: "Intermediate" } ]
+    }
+  };
+
+  var AI_HEADING = { es: "Inteligencia Artificial", en: "Artificial Intelligence" };
+
+  function el(tag, cls, html){
+    var e = document.createElement(tag);
+    if(cls) e.className = cls;
+    if(html !== undefined) e.innerHTML = html;
+    return e;
+  }
+
+  function render(lang){
+    var d = DATA[lang];
+    document.documentElement.lang = lang;
+
+    document.getElementById('roleLine').textContent = d.role;
+    document.getElementById('metaLocation').textContent = d.location;
+    document.getElementById('metaPhone').textContent = d.phone;
+    document.getElementById('lblSummary').textContent = d.lblSummary;
+    document.getElementById('lblExperience').textContent = d.lblExperience;
+    document.getElementById('lblEducation').textContent = d.lblEducation;
+    document.getElementById('lblSkills').textContent = d.lblSkills;
+    document.getElementById('lblLanguages').textContent = d.lblLanguages;
+    document.getElementById('dlLabel').textContent = d.dlLabel;
+    document.getElementById('footerNote').textContent = d.footer;
+    document.getElementById('summaryText').textContent = d.summary;
+
+    var expList = document.getElementById('experienceList');
+    expList.innerHTML = '';
+    d.experience.forEach(function(job){
+      var jobEl = el('div', 'job');
+      var head = el('div', 'job-head');
+      head.appendChild(el('div', '', '<span class="job-title">'+job.title+'</span> — <span class="job-company">'+job.company+'</span>'));
+      head.appendChild(el('div', 'job-dates mono', job.dates));
+      jobEl.appendChild(head);
+      var ul = el('ul');
+      job.bullets.forEach(function(b){ ul.appendChild(el('li', '', b)); });
+      jobEl.appendChild(ul);
+      if(job.ai){
+        var aiBlock = el('div', 'ai-block');
+        aiBlock.appendChild(el('div', 'skill-group-label', AI_HEADING[lang]));
+        job.ai.forEach(function(item){
+          var row = el('div', 'ai-item');
+          row.appendChild(el('div', 'dot'));
+          row.appendChild(el('div', '', '<b>'+item.label+'</b> — '+item.text));
+          aiBlock.appendChild(row);
+        });
+        jobEl.appendChild(aiBlock);
+      }
+      expList.appendChild(jobEl);
+    });
+
+    var eduList = document.getElementById('educationList');
+    eduList.innerHTML = '';
+    d.education.forEach(function(ed){
+      var item = el('div', 'edu-item');
+      item.appendChild(el('div', 'edu-degree', ed.degree));
+      item.appendChild(el('div', 'edu-meta mono', ed.meta));
+      if(ed.detail) item.appendChild(el('div', 'edu-detail', ed.detail));
+      eduList.appendChild(item);
+    });
+
+    var skillsGrid = document.getElementById('skillsGrid');
+    skillsGrid.innerHTML = '';
+    d.skillGroups.forEach(function(g){
+      var group = el('div');
+      group.appendChild(el('div', 'skill-group-label', g.label));
+      var chips = el('div', 'chips');
+      g.items.forEach(function(item){ chips.appendChild(el('span', 'chip', item)); });
+      group.appendChild(chips);
+      skillsGrid.appendChild(group);
+    });
+
+    var langsList = document.getElementById('langsList');
+    langsList.innerHTML = '';
+    d.languages.forEach(function(l){
+      langsList.appendChild(el('div', 'lang-item', '<div>'+l.name+'</div><div class="lvl mono">'+l.level+'</div>'));
+    });
+
+    document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
+    document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+    document.getElementById('heroPhoto').hidden = (lang !== 'es');
+  }
+
+  var current = 'es';
+  document.getElementById('btn-es').addEventListener('click', function(){ current='es'; render(current); });
+  document.getElementById('btn-en').addEventListener('click', function(){ current='en'; render(current); });
+  document.getElementById('btn-print').addEventListener('click', function(){ window.print(); });
+
+  render(current);
+})();
+</script>
