@@ -5,7 +5,7 @@ set -euo pipefail
 
 CV_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PORT=8799
-CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)"
+CHROME="${CHROME_BIN:-$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser || true)}"
 PDF_ES="$CV_DIR/CV_Francisco_Hidalgo_Ruiz_es.pdf"
 PDF_EN="$CV_DIR/CV_Francisco_Hidalgo_Ruiz_en.pdf"
 
