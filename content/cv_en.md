@@ -1,7 +1,7 @@
 # CV — English
 
 **Francisco Javier Hidalgo Ruiz**
-Senior Backend Developer & AI Integration Engineer · Granada, Spain
+Senior Backend Developer & AI Engineer · Granada, Spain
 franjhr@gmail.com · +34 647 519 804 · linkedin.com/in/franjhr
 
 ## Professional Summary
