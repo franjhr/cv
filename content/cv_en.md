@@ -1,7 +1,7 @@
 # CV — English
 
 **Francisco Javier Hidalgo Ruiz**
-Senior Backend Developer · Granada, Spain
+Senior Backend Developer & AI Integration Engineer · Granada, Spain
 franjhr@gmail.com · +34 647 519 804 · linkedin.com/in/franjhr
 
 ## Professional Summary
@@ -12,7 +12,7 @@ Software engineer with 15+ years of experience in web development, specialized i
 **Bizneo HR Solutions — Senior Backend Developer** · Jul 2017 - Present
 - Backend development in Ruby on Rails for an ATS (applicant tracking system); feature design, code review, and mentoring within a team of 10 developers.
 - Coordination of the application's support and maintenance team.
-- Integration of generative AI (Amazon Bedrock) across several ATS features: job description generation, candidate-to-job matching, conversational chatbot, and automatic CV summarization.
+- Integration of generative AI (Amazon Bedrock) across several ATS features: job description generation, candidate-to-job matching, a RAG-based (Retrieval-Augmented Generation) conversational chatbot for candidate screening, and automatic CV summarization.
 - Adopted Claude Code as an AI assistant in the daily development workflow, speeding up feature design, code review, and issue resolution.
 - Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Docker, automated testing and CI, HTML/CSS, JavaScript, React.
 
@@ -39,7 +39,7 @@ Software engineer with 15+ years of experience in web development, specialized i
 **Languages & Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
 **Data & Infrastructure**: PostgreSQL · Elasticsearch · Redis / Sidekiq · Docker
 **Artificial Intelligence**:
-- Amazon Bedrock — generative AI integration in production (candidate matching, content generation, conversational chatbot, automatic CV summarization)
+- Amazon Bedrock — generative AI integration in production: a RAG (Retrieval-Augmented Generation) system powering a conversational chatbot for candidate screening, plus candidate matching, content generation, and automatic CV summarization
 - Claude Code — generative AI adopted in the daily development workflow, speeding up feature design, code review, and issue resolution
 **Methodology & Quality**: TDD · Automated testing · Continuous Integration (CI) · Git · Code review
 **Technical Leadership**: Mentoring · Feature design · Team coordination

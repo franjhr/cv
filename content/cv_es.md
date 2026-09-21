@@ -1,7 +1,7 @@
 # CV — Español
 
 **Francisco Javier Hidalgo Ruiz**
-Senior Backend Developer · Granada, España
+Senior Backend Developer & AI Integration Engineer · Granada, España
 franjhr@gmail.com · 647 519 804 · linkedin.com/in/franjhr
 
 ## Perfil profesional
@@ -12,7 +12,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 **Bizneo HR Solutions — Senior Backend Developer** · jul. 2017 - actualidad
 - Desarrollo backend en Ruby on Rails de un ATS (plataforma de gestión de procesos de selección); diseño de funcionalidad, revisión de código y mentoring dentro de un equipo de 10 desarrolladores.
 - Coordinación del equipo de soporte y mantenimiento de la aplicación.
-- Integración de IA generativa (Amazon Bedrock) en varias funcionalidades del ATS: generación de descripciones de puesto, matching entre candidatos y ofertas, chatbot conversacional y resumen automático de CVs.
+- Integración de IA generativa (Amazon Bedrock) en varias funcionalidades del ATS: generación de descripciones de puesto, matching entre candidatos y ofertas, un chatbot conversacional de evaluación de candidatos basado en RAG (Retrieval-Augmented Generation), y resumen automático de CVs.
 - Adopción de Claude Code como asistente de IA en el flujo de desarrollo diario, acelerando diseño de funcionalidad, revisión de código y resolución de incidencias.
 - Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Docker, tests automatizados y CI, HTML/CSS, JavaScript, React.
 
@@ -39,7 +39,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 **Lenguajes y Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
 **Datos e Infraestructura**: PostgreSQL · Elasticsearch · Redis / Sidekiq · Docker
 **Inteligencia Artificial**:
-- Amazon Bedrock — integración de IA generativa en el producto (matching de candidatos, generación de contenido, chatbot conversacional, resumen automático de CVs)
+- Amazon Bedrock — integración de IA generativa en el producto: sistema RAG (Retrieval-Augmented Generation) aplicado a un chatbot conversacional de evaluación de candidatos, además de matching de candidatos, generación de contenido y resumen automático de CVs
 - Claude Code — adopción de IA generativa en el flujo de desarrollo diario, acelerando diseño de funcionalidad, revisión de código y resolución de incidencias
 **Metodología y Calidad**: TDD · Tests automatizados · Integración continua (CI) · Git · Revisión de código
 **Liderazgo técnico**: Mentoring · Diseño de funcionalidad · Coordinación de equipo
