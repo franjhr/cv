@@ -27,13 +27,15 @@ for i in $(seq 1 20); do
   sleep 0.2
 done
 
+CHROME_FLAGS="--headless --disable-gpu --no-sandbox --disable-dev-shm-usage --no-pdf-header-footer"
+
 echo "Generando $(basename "$PDF_ES")..."
-"$CHROME" --headless --disable-gpu --no-pdf-header-footer \
+"$CHROME" $CHROME_FLAGS \
   --print-to-pdf="$PDF_ES" \
   "http://127.0.0.1:$PORT/index.html?lang=es"
 
 echo "Generando $(basename "$PDF_EN")..."
-"$CHROME" --headless --disable-gpu --no-pdf-header-footer \
+"$CHROME" $CHROME_FLAGS \
   --print-to-pdf="$PDF_EN" \
   "http://127.0.0.1:$PORT/index.html?lang=en"
 

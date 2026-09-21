@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'scripts/generate_pdfs.sh'
   workflow_dispatch:
 
 permissions:
