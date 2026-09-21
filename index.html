@@ -241,12 +241,6 @@
   .langs{ display:flex; gap: 28px; flex-wrap:wrap; font-size:1.05rem; }
   .lang-item .lvl{ color: var(--ink-muted); font-size:0.95rem; }
 
-  footer{
-    max-width:780px; margin:0 auto; padding-block: 20px 40px;
-    font-family:'JetBrains Mono', monospace; font-size:0.82rem; color: var(--ink-faint);
-    border-top:1px solid var(--border);
-  }
-
   @media (max-width: 480px){
     .job-head{ flex-direction:column; align-items:flex-start; }
     header.hero{ flex-direction:column; align-items:flex-start; gap:16px; }
@@ -321,10 +315,6 @@
   </section>
 </main>
 
-<footer>
-  <span id="footerNote">CV generado y mantenido con Claude Code — franjhr.github.io/cv</span>
-</footer>
-
 <script>
 (function(){
   var DATA = {
@@ -338,7 +328,6 @@
       lblSkills: "Aptitudes técnicas",
       lblLanguages: "Idiomas",
       dlLabel: "Descargar PDF",
-      footer: "CV generado y mantenido con Claude Code — franjhr.github.io/cv",
       summary: "Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Actualmente Senior Backend Developer en Bizneo HR Solutions, donde combino desarrollo, diseño de funcionalidad, revisión de código y mentoring, coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega.",
       experience: [
         {
@@ -409,7 +398,6 @@
       lblSkills: "Technical Skills",
       lblLanguages: "Languages",
       dlLabel: "Download PDF",
-      footer: "CV built and maintained with Claude Code — franjhr.github.io/cv",
       summary: "Software engineer with 15+ years of experience in web development, specialized in Ruby on Rails. Currently Senior Backend Developer at Bizneo HR Solutions, combining development, feature design, code review, and mentoring while coordinating the application's support and maintenance team. Actively integrates AI tools into the development workflow to improve delivery quality and speed.",
       experience: [
         {
@@ -494,7 +482,6 @@
     document.getElementById('lblSkills').textContent = d.lblSkills;
     document.getElementById('lblLanguages').textContent = d.lblLanguages;
     document.getElementById('dlLabel').textContent = d.dlLabel;
-    document.getElementById('footerNote').textContent = d.footer;
     document.getElementById('summaryText').textContent = d.summary;
 
     var expList = document.getElementById('experienceList');
