@@ -14,7 +14,7 @@ Software engineer with 15+ years of experience in web development, specialized i
 - Coordination of the application's support and maintenance team.
 - Integration of generative AI (Amazon Bedrock) across several ATS features: job description generation, candidate-to-job matching, conversational chatbot, and automatic CV summarization.
 - Adopted Claude Code as an AI assistant in the daily development workflow, speeding up feature design, code review, and issue resolution.
-- Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Memcached, Docker, automated testing and CI, HTML/CSS, JavaScript, React.
+- Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Docker, automated testing and CI, HTML/CSS, JavaScript, React.
 
 **NGA Human Resources — Analyst | Senior Developer** · Sep 2015 - Jul 2017
 - Analysis and development of web applications with Ruby on Rails, MySQL, JavaScript, HTML, CSS.
@@ -37,7 +37,7 @@ Software engineer with 15+ years of experience in web development, specialized i
 
 ## Technical Skills
 **Languages & Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
-**Data & Infrastructure**: PostgreSQL · Elasticsearch · Redis / Sidekiq · Memcached · Docker
+**Data & Infrastructure**: PostgreSQL · Elasticsearch · Redis / Sidekiq · Docker
 **Artificial Intelligence**:
 - Amazon Bedrock — generative AI integration in production (candidate matching, content generation, conversational chatbot, automatic CV summarization)
 - Claude Code — generative AI adopted in the daily development workflow, speeding up feature design, code review, and issue resolution
