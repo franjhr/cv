@@ -157,6 +157,8 @@
     margin: 0 0 20px 0;
     padding-bottom:10px;
     border-bottom: 2px solid var(--accent);
+    break-after: avoid;
+    page-break-after: avoid;
   }
   .section-title::before{
     content:"";
@@ -197,13 +199,14 @@
   .job li{ margin-bottom: 7px; }
   .job li::marker{ color: var(--ink-faint); }
 
-  .edu-item{ margin-bottom: 16px; }
+  .edu-item{ margin-bottom: 16px; break-inside: avoid; }
   .edu-item:last-child{ margin-bottom:0; }
   .edu-degree{ font-weight:600; font-size:1.05rem; }
   .edu-meta{ font-family:'JetBrains Mono', monospace; font-size:0.85rem; color: var(--ink-faint); }
   .edu-detail{ color: var(--ink-muted); font-size:1rem; margin-top:3px; }
 
   .skills-grid{ display:flex; flex-direction:column; gap:18px; }
+  .skill-group{ break-inside: avoid; }
   .skill-group-label{
     font-family:'JetBrains Mono', monospace;
     font-size:0.8rem;
@@ -265,10 +268,10 @@
       <button id="btn-es" aria-pressed="true">ES</button>
       <button id="btn-en" aria-pressed="false">EN</button>
     </div>
-    <button class="btn-download" id="btn-print">
+    <a class="btn-download" id="btn-download" download>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
       <span id="dlLabel">PDF</span>
-    </button>
+    </a>
   </div>
 </div>
 
@@ -522,7 +525,7 @@
     var skillsGrid = document.getElementById('skillsGrid');
     skillsGrid.innerHTML = '';
     d.skillGroups.forEach(function(g){
-      var group = el('div');
+      var group = el('div', 'skill-group');
       group.appendChild(el('div', 'skill-group-label', g.label));
       var chips = el('div', 'chips');
       g.items.forEach(function(item){ chips.appendChild(el('span', 'chip', item)); });
@@ -539,12 +542,16 @@
     document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
     document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
     document.getElementById('heroPhoto').hidden = (lang !== 'es');
+
+    var dl = document.getElementById('btn-download');
+    dl.href = lang === 'es' ? 'cv_es.pdf' : 'cv_en.pdf';
+    dl.setAttribute('download', lang === 'es' ? 'CV_Francisco_Hidalgo_Ruiz_es.pdf' : 'CV_Francisco_Hidalgo_Ruiz_en.pdf');
   }
 
-  var current = 'es';
+  var params = new URLSearchParams(window.location.search);
+  var current = params.get('lang') === 'en' ? 'en' : 'es';
   document.getElementById('btn-es').addEventListener('click', function(){ current='es'; render(current); });
   document.getElementById('btn-en').addEventListener('click', function(){ current='en'; render(current); });
-  document.getElementById('btn-print').addEventListener('click', function(){ window.print(); });
 
   render(current);
 })();
