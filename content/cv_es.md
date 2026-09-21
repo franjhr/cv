@@ -5,7 +5,7 @@ Senior Backend Developer · Granada, España
 franjhr@gmail.com · 647 519 804 · linkedin.com/in/franjhr
 
 ## Perfil profesional
-Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Actualmente Senior Backend Developer en Bizneo HR Solutions, donde combino desarrollo, diseño de funcionalidad, revisión de código y mentoring, coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega.
+Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Actualmente Senior Backend Developer en una plataforma SaaS de gestión de RRHH (ATS), donde combino desarrollo, diseño de funcionalidad, revisión de código y mentoring, coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega.
 
 ## Experiencia profesional
 
