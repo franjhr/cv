@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    width: 1200px; height: 630px;
+    background: #0E7C7B;
+    overflow: hidden;
+  }
+  .card {
+    position: relative;
+    width: 1200px; height: 630px;
+    background: #0E7C7B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 90px;
+    box-sizing: border-box;
+  }
+  .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 56px;
+    color: #FFFFFF;
+    margin-bottom: 14px;
+  }
+  .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    color: #7FD8D2;
+    margin-bottom: 46px;
+  }
+  .terminal {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px;
+    padding: 16px 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    color: #EAF7F6;
+    width: fit-content;
+    white-space: pre;
+  }
+  .prompt { color: #FFD9A0; }
+  .str { color: #FFD9A0; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="name">Francisco Javier Hidalgo Ruiz</div>
+    <div class="role">Senior Backend Developer &amp; AI Engineer</div>
+    <div class="terminal"><span class="prompt">$ </span>ruby -e 'puts <span class="str">"backend dev exploring AI"</span>'</div>
+  </div>
+</body>
+</html>
