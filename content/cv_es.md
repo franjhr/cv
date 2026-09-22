@@ -14,7 +14,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 - Coordinación del equipo de soporte y mantenimiento de la aplicación.
 - Integración de IA generativa (Amazon Bedrock) en varias funcionalidades del ATS: generación de descripciones de puesto, matching entre candidatos y ofertas, un chatbot conversacional de evaluación de candidatos basado en RAG (Retrieval-Augmented Generation), y resumen automático de CVs.
 - Adopción de Claude Code como asistente de IA en el flujo de desarrollo diario, acelerando diseño de funcionalidad, revisión de código y resolución de incidencias.
-- Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Docker, tests automatizados y CI, HTML/CSS, JavaScript, React.
+- Stack: Ruby on Rails, PostgreSQL, Elasticsearch, Sidekiq/Redis, Docker, AWS (Bedrock), tests automatizados y CI, HTML/CSS, JavaScript, React.
 
 **NGA Human Resources — Analyst | Senior Developer** · sept. 2015 - jul. 2017
 - Análisis y desarrollo de aplicaciones web con Ruby on Rails, MySQL, JavaScript, HTML, CSS.
@@ -27,8 +27,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 - Desarrollo de aplicaciones web mediante TDD (Ruby on Rails, MySQL, HTML+CSS, JavaScript).
 
 **Virtual Solutions & Artificial Intelligence S.L. — Coordinador del departamento técnico** · may. 2009 - dic. 2011
-- Coordinación del departamento técnico; diseño y desarrollo de portales web (Python, Django, JSP) para clientes como la Universidad de Granada.
-- Participación en proyectos I+D+I: INTERFAQ (Junta de Andalucía) y Plan Avanza Competitividad (sistema de vigilancia epidemiológica).
+- Coordinación del departamento técnico; diseño y desarrollo de portales web (Python, Django, JSP) para clientes como la Universidad de Granada, incluyendo los proyectos I+D+I INTERFAQ (Junta de Andalucía) y Plan Avanza Competitividad (sistema de vigilancia epidemiológica).
 
 ## Formación
 - Ingeniería Informática (Licenciatura) — Universidad de Granada (2007-2009). Proyecto fin de carrera: plataforma web de gestión de clubes deportivos (Python/Django) — Matrícula de Honor.
@@ -37,7 +36,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 
 ## Aptitudes técnicas
 **Lenguajes y Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
-**Datos e Infraestructura**: PostgreSQL · Elasticsearch · Redis / Sidekiq · Docker
+**Datos e Infraestructura**: AWS · PostgreSQL · Elasticsearch · Redis / Sidekiq · Docker
 **Inteligencia Artificial**:
 - Amazon Bedrock — integración de IA generativa en el producto: sistema RAG (Retrieval-Augmented Generation) aplicado a un chatbot conversacional de evaluación de candidatos, además de matching de candidatos, generación de contenido y resumen automático de CVs
 - Claude Code — adopción de IA generativa en el flujo de desarrollo diario, acelerando diseño de funcionalidad, revisión de código y resolución de incidencias
