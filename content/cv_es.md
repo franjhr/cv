@@ -9,7 +9,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 
 ## Experiencia profesional
 
-**Bizneo HR Solutions — Senior Backend Developer** · jul. 2017 - actualidad
+**Bizneo HR Solutions — Senior Backend Developer** · jul. 2017 - sept. 2026
 - Desarrollo backend en Ruby on Rails de un ATS (plataforma de gestión de procesos de selección); diseño de funcionalidad, revisión de código y mentoring dentro de un equipo de 10 desarrolladores.
 - Coordinación del equipo de soporte y mantenimiento de la aplicación.
 - Integración de IA generativa (Amazon Bedrock) en varias funcionalidades del ATS: generación de descripciones de puesto, matching entre candidatos y ofertas, un chatbot conversacional de evaluación de candidatos basado en RAG (Retrieval-Augmented Generation), y resumen automático de CVs.
@@ -33,6 +33,7 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 - Ingeniería Informática (Licenciatura) — Universidad de Granada (2007-2009). Proyecto fin de carrera: plataforma web de gestión de clubes deportivos (Python/Django) — Matrícula de Honor.
 - Ingeniería Técnica en Informática de Sistemas (Diplomatura) — Universidad de Granada (2003-2007).
 - Certificado de Aptitud Pedagógica (CAP) — Universidad de Granada (2009).
+- Máster AI Engineer — thePower Tech School (oct. 2026 - en curso). RAG, agentes, fine-tuning (LoRA/QLoRA), MLOps (MLflow), observabilidad de LLMs (LangFuse/LangSmith) y despliegue en AWS (Bedrock + Lambda).
 
 ## Aptitudes técnicas
 **Lenguajes y Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    width: 1200px; height: 1200px;
+    background: #0E7C7B;
+    overflow: hidden;
+  }
+  .card {
+    position: relative;
+    width: 1200px; height: 1200px;
+    box-sizing: border-box;
+    padding: 96px 100px 0 100px;
+    background: #0E7C7B;
+  }
+  .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    color: #7FD8D2;
+    margin-bottom: 14px;
+  }
+  .title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 1.05;
+    color: #FFFFFF;
+    margin-bottom: 64px;
+  }
+  .timeline {
+    position: relative;
+    margin-left: 150px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 18px; bottom: 110px;
+    width: 3px;
+    background: rgba(255,255,255,0.28);
+  }
+  .item {
+    position: relative;
+    padding-left: 48px;
+    margin-bottom: 38px;
+  }
+  .year {
+    position: absolute;
+    left: -150px; top: 4px;
+    width: 120px;
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    color: #7FD8D2;
+  }
+  .dot {
+    position: absolute;
+    left: -9px; top: 10px;
+    width: 21px; height: 21px;
+    border-radius: 50%;
+    background: #EAF7F6;
+  }
+  .what {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 29px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  .detail {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 21px;
+    color: rgba(234,247,246,0.72);
+    margin-top: 6px;
+  }
+  .item.next .dot {
+    left: -15px; top: 4px;
+    width: 33px; height: 33px;
+    background: #FFD9A0;
+    box-shadow: 0 0 0 10px rgba(255,217,160,0.22);
+  }
+  .item.next .year, .item.next .what { color: #FFD9A0; }
+  .item.next .what { font-size: 34px; }
+  .tag {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 14px;
+    border: 1px solid rgba(255,217,160,0.6);
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 19px;
+    color: #FFD9A0;
+  }
+  .footer {
+    position: absolute;
+    left: 100px; right: 100px; bottom: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid rgba(255,255,255,0.22);
+    padding-top: 26px;
+  }
+  .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 34px;
+    color: #FFFFFF;
+  }
+  .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 21px;
+    color: #7FD8D2;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="kicker">$ git log --reverse --oneline</div>
+    <div class="title">El siguiente capítulo</div>
+
+    <div class="timeline">
+      <div class="item">
+        <div class="year">2003</div><div class="dot"></div>
+        <div class="what">Empiezo Informática</div>
+        <div class="detail">Universidad de Granada</div>
+      </div>
+      <div class="item">
+        <div class="year">2009</div><div class="dot"></div>
+        <div class="what">Ingeniero Informático</div>
+        <div class="detail">PFC con Matrícula de Honor · primer puesto técnico</div>
+      </div>
+      <div class="item">
+        <div class="year">2012</div><div class="dot"></div>
+        <div class="what">Analista y desarrollador web</div>
+      </div>
+      <div class="item">
+        <div class="year">2015</div><div class="dot"></div>
+        <div class="what">Ruby on Rails, para quedarme</div>
+      </div>
+      <div class="item">
+        <div class="year">2017</div><div class="dot"></div>
+        <div class="what">Senior Backend Developer</div>
+        <div class="detail">Mentoring y coordinación de equipo</div>
+      </div>
+      <div class="item">
+        <div class="year">2025</div><div class="dot"></div>
+        <div class="what">IA generativa en producción</div>
+        <div class="detail">RAG con Amazon Bedrock</div>
+      </div>
+      <div class="item next">
+        <div class="year">2026</div><div class="dot"></div>
+        <div class="what">Máster AI Engineer</div>
+        <div class="detail">thePower Tech School</div>
+        <div class="tag">HEAD → aquí empieza lo siguiente</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="name">Francisco Javier Hidalgo Ruiz</div>
+      <div class="role">Senior Backend Developer &amp; AI Engineer</div>
+    </div>
+  </div>
+</body>
+</html>

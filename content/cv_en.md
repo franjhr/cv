@@ -9,7 +9,7 @@ Software engineer with 15+ years of experience in web development, specialized i
 
 ## Professional Experience
 
-**Bizneo HR Solutions — Senior Backend Developer** · Jul 2017 - Present
+**Bizneo HR Solutions — Senior Backend Developer** · Jul 2017 - Sep 2026
 - Backend development in Ruby on Rails for an ATS (applicant tracking system); feature design, code review, and mentoring within a team of 10 developers.
 - Coordination of the application's support and maintenance team.
 - Integration of generative AI (Amazon Bedrock) across several ATS features: job description generation, candidate-to-job matching, a RAG-based (Retrieval-Augmented Generation) conversational chatbot for candidate screening, and automatic CV summarization.
@@ -33,6 +33,7 @@ Software engineer with 15+ years of experience in web development, specialized i
 - Computer Engineering (BSc/MSc equivalent) — University of Granada (2007-2009). Final project: web platform for sports club management (Python/Django) — Highest Honors.
 - Technical Engineering in Computer Systems — University of Granada (2003-2007).
 - Teaching Certificate (CAP) — University of Granada (2009).
+- AI Engineer Master's Program — thePower Tech School (Oct 2026 - in progress). RAG, agents, fine-tuning (LoRA/QLoRA), MLOps (MLflow), LLM observability (LangFuse/LangSmith), and deployment on AWS (Bedrock + Lambda).
 
 ## Technical Skills
 **Languages & Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
