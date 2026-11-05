@@ -207,6 +207,8 @@
   .job ul{ margin: 10px 0 0 0; padding-left: 1.15em; }
   .job li{ margin-bottom: 7px; }
   .job li::marker{ color: var(--ink-faint); }
+  .project-desc{ margin-top: 8px; }
+  .edu-item.edu-highlight{ gap: 2px; }
 
   .edu-item{ margin-bottom: 16px; break-inside: avoid; }
   .edu-item:last-child{ margin-bottom:0; }
@@ -252,6 +254,7 @@
 
   .langs{ display:flex; gap: 28px; flex-wrap:wrap; font-size:1.05rem; }
   .lang-item .lvl{ color: var(--ink-muted); font-size:0.95rem; }
+  .lang-item .lang-note{ color: var(--ink-muted); font-size:0.9rem; margin-top:4px; }
 
   @media (max-width: 480px){
     .job-head{ flex-direction:column; align-items:flex-start; }
@@ -262,9 +265,17 @@
     body{ background:#fff; color:#111; padding-inline:0; }
     .topbar{ display:none; }
     main{ padding-block: 0; max-width:100%; }
-    .job{ break-inside: avoid; }
+    section{ margin-bottom: 18px; }
+    .job, .lang-item{ break-inside: avoid; }
+    .job{ padding-bottom: 11px; }
+    .job li{ margin-bottom: 2px; }
+    .edu-item{ margin-bottom: 10px; }
+    header.hero{ margin-bottom: 16px; }
+    .skills-grid{ gap: 10px; }
+    .skill-group-label{ margin-bottom: 5px; }
+    .chips{ gap: 6px; }
     a{ color:#111; }
-    .ai-block{ background:#E6F4F3; border-color:#BFE3E1; }
+    .ai-block{ background:#E6F4F3; border-color:#BFE3E1; -webkit-print-color-adjust:exact; print-color-adjust:exact; padding: 10px 14px; gap: 7px; }
   }
 </style>
 </head>
@@ -312,6 +323,11 @@
   </section>
 
   <section>
+    <h2 class="section-title" id="lblProjects">Proyectos personales</h2>
+    <div id="projectsList"></div>
+  </section>
+
+  <section>
     <h2 class="section-title" id="lblEducation">Formación</h2>
     <div id="educationList"></div>
   </section>
@@ -336,11 +352,12 @@
       phone: "647 519 804",
       lblSummary: "Perfil profesional",
       lblExperience: "Experiencia profesional",
+      lblProjects: "Proyectos personales",
       lblEducation: "Formación",
       lblSkills: "Aptitudes técnicas",
       lblLanguages: "Idiomas",
       dlLabel: "Descargar PDF",
-      summary: "Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Actualmente Senior Backend Developer en una plataforma SaaS de gestión de RRHH (ATS), donde combino desarrollo, diseño de funcionalidad, revisión de código y mentoring, coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega.",
+      summary: "Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Senior Backend Developer con experiencia en una plataforma SaaS de gestión de RRHH (ATS), combinando desarrollo, diseño de funcionalidad, revisión de código y mentoring, y coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega. Actualmente curso el Máster AI Engineer de thePower Tech School.",
       experience: [
         {
           title: "Senior Backend Developer",
@@ -386,11 +403,33 @@
           ]
         }
       ],
+      projects: [
+        {
+          title: "Mykitker",
+          url: "https://mykitker.com",
+          dates: "oct. 2026 — actualidad",
+          description: "Plataforma para que creadores de contenido generen su media kit conectando su cuenta de Instagram. En producción y en desarrollo activo; la conexión abierta con Instagram está en revisión por Meta.",
+          bullets: [
+            "Diseño, desarrollo y despliegue en solitario, con Claude Code en el flujo de desarrollo.",
+            "Backend en Django y PostgreSQL, interfaz con HTMX, integración OAuth con la API de Instagram y sincronización de métricas en segundo plano.",
+            "Infraestructura propia: Docker en VPS, Caddy, Cloudflare, CI con GitHub Actions y copias de seguridad cifradas con restauración probada."
+          ]
+        },
+        {
+          title: "Tidewiki",
+          dates: "sept. 2026 — actualidad",
+          description: "Herramienta en Ruby que genera con IA la wiki de un repositorio y la actualiza con cada commit, solo donde cambió el código. En desarrollo; primera versión pública en preparación. Ejemplo real: <a href=\"https://github.com/tidewiki-demos/itsdangerous/tree/main/docs/wiki\" target=\"_blank\" rel=\"noopener\">github.com/tidewiki-demos/itsdangerous</a>.",
+          bullets: [
+            "Actualización incremental propuesta mediante pull request, con control de coste por ejecución y conservación de las ediciones manuales.",
+            "Modelo configurable (Claude, OpenAI, Bedrock, Ollama...), con las referencias al código verificadas contra el repositorio y secretos redactados antes de enviar nada al modelo."
+          ]
+        }
+      ],
       education: [
+        { highlight: true, degree: "Máster AI Engineer", meta: "thePower Tech School · oct. 2026 — en curso", detail: "RAG, agentes, fine-tuning (LoRA/QLoRA), MLOps (MLflow), observabilidad de LLMs (LangFuse/LangSmith) y despliegue en AWS (Bedrock + Lambda)." },
         { degree: "Ingeniería Informática (Licenciatura)", meta: "Universidad de Granada · 2007–2009", detail: "Proyecto fin de carrera: plataforma web de gestión de clubes deportivos (Python/Django) — Matrícula de Honor." },
         { degree: "Ingeniería Técnica en Informática de Sistemas (Diplomatura)", meta: "Universidad de Granada · 2003–2007", detail: "" },
-        { degree: "Certificado de Aptitud Pedagógica (CAP)", meta: "Universidad de Granada · 2009", detail: "" },
-        { degree: "Máster AI Engineer", meta: "thePower Tech School · oct. 2026 — en curso", detail: "RAG, agentes, fine-tuning (LoRA/QLoRA), MLOps (MLflow), observabilidad de LLMs (LangFuse/LangSmith) y despliegue en AWS (Bedrock + Lambda)." }
+        { degree: "Certificado de Aptitud Pedagógica (CAP)", meta: "Universidad de Granada · 2009", detail: "" }
       ],
       skillGroups: [
         { label: "Lenguajes y frameworks", items: ["Ruby on Rails","JavaScript","React","HTML5 / CSS3"] },
@@ -398,7 +437,7 @@
         { label: "Metodología y calidad", items: ["TDD","Tests automatizados","Integración continua (CI)","Git","Revisión de código"] },
         { label: "Liderazgo técnico", items: ["Mentoring","Diseño de funcionalidad","Coordinación de equipo"] }
       ],
-      languages: [ { name: "Español", level: "Nativo" }, { name: "Inglés", level: "Intermedio" } ]
+      languages: [ { name: "Español", level: "Nativo" }, { name: "Inglés", level: "Intermedio (B1)", notes: ["En curso: EasyPeasyFluent, 5 clases/semana centradas en speaking (hasta ago. 2027)", "Objetivo: C1 con certificado IELTS"] } ]
     },
     en: {
       role: "Senior Backend Developer & AI Engineer",
@@ -406,11 +445,12 @@
       phone: "+34 647 519 804",
       lblSummary: "Professional Summary",
       lblExperience: "Professional Experience",
+      lblProjects: "Personal Projects",
       lblEducation: "Education",
       lblSkills: "Technical Skills",
       lblLanguages: "Languages",
       dlLabel: "Download PDF",
-      summary: "Software engineer with 15+ years of experience in web development, specialized in Ruby on Rails. Currently Senior Backend Developer at an HR management SaaS platform (ATS), combining development, feature design, code review, and mentoring while coordinating the application's support and maintenance team. Actively integrates AI tools into the development workflow to improve delivery quality and speed.",
+      summary: "Software engineer with 15+ years of experience in web development, specialized in Ruby on Rails. Senior Backend Developer with experience on an HR management SaaS platform (ATS), combining development, feature design, code review, and mentoring while coordinating the application's support and maintenance team. Actively integrates AI tools into the development workflow to improve delivery quality and speed. Currently enrolled in the AI Engineer Master's programme at thePower Tech School.",
       experience: [
         {
           title: "Senior Backend Developer",
@@ -456,11 +496,33 @@
           ]
         }
       ],
+      projects: [
+        {
+          title: "Mykitker",
+          url: "https://mykitker.com",
+          dates: "Oct 2026 — present",
+          description: "Platform that lets content creators build their media kit by connecting their Instagram account. Live and under active development; open Instagram access is under Meta review.",
+          bullets: [
+            "Designed, built and deployed solo, with Claude Code in the development workflow.",
+            "Django and PostgreSQL backend, HTMX interface, OAuth integration with the Instagram API and background metrics sync.",
+            "Self-managed infrastructure: Docker on a VPS, Caddy, Cloudflare, CI with GitHub Actions and encrypted backups with tested restores."
+          ]
+        },
+        {
+          title: "Tidewiki",
+          dates: "Sept 2026 — present",
+          description: "Ruby tool that uses AI to generate a repository's wiki and update it with every commit, only where the code changed. In development; first public release in preparation. Real example: <a href=\"https://github.com/tidewiki-demos/itsdangerous/tree/main/docs/wiki\" target=\"_blank\" rel=\"noopener\">github.com/tidewiki-demos/itsdangerous</a>.",
+          bullets: [
+            "Incremental updates proposed through a pull request, with a per-run cost limit and manual edits preserved.",
+            "Configurable model (Claude, OpenAI, Bedrock, Ollama...), with code references checked against the repository and secrets redacted before anything is sent to the model."
+          ]
+        }
+      ],
       education: [
+        { highlight: true, degree: "AI Engineer Master's Program", meta: "thePower Tech School · Oct 2026 — in progress", detail: "RAG, agents, fine-tuning (LoRA/QLoRA), MLOps (MLflow), LLM observability (LangFuse/LangSmith), and deployment on AWS (Bedrock + Lambda)." },
         { degree: "Computer Engineering (BSc/MSc equivalent)", meta: "University of Granada · 2007–2009", detail: "Final project: web platform for sports club management (Python/Django) — Highest Honors." },
         { degree: "Technical Engineering in Computer Systems", meta: "University of Granada · 2003–2007", detail: "" },
-        { degree: "Teaching Certificate (CAP)", meta: "University of Granada · 2009", detail: "" },
-        { degree: "AI Engineer Master's Program", meta: "thePower Tech School · Oct 2026 — in progress", detail: "RAG, agents, fine-tuning (LoRA/QLoRA), MLOps (MLflow), LLM observability (LangFuse/LangSmith), and deployment on AWS (Bedrock + Lambda)." }
+        { degree: "Teaching Certificate (CAP)", meta: "University of Granada · 2009", detail: "" }
       ],
       skillGroups: [
         { label: "Languages & frameworks", items: ["Ruby on Rails","JavaScript","React","HTML5 / CSS3"] },
@@ -468,7 +530,7 @@
         { label: "Methodology & quality", items: ["TDD","Automated testing","Continuous Integration (CI)","Git","Code review"] },
         { label: "Technical leadership", items: ["Mentoring","Feature design","Team coordination"] }
       ],
-      languages: [ { name: "Spanish", level: "Native" }, { name: "English", level: "Intermediate" } ]
+      languages: [ { name: "Spanish", level: "Native" }, { name: "English", level: "Intermediate (B1)", notes: ["In progress: EasyPeasyFluent, 5 classes/week focused on speaking (until Aug 2027)", "Goal: C1 with IELTS certification"] } ]
     }
   };
 
@@ -490,6 +552,7 @@
     document.getElementById('metaPhone').textContent = d.phone;
     document.getElementById('lblSummary').textContent = d.lblSummary;
     document.getElementById('lblExperience').textContent = d.lblExperience;
+    document.getElementById('lblProjects').textContent = d.lblProjects;
     document.getElementById('lblEducation').textContent = d.lblEducation;
     document.getElementById('lblSkills').textContent = d.lblSkills;
     document.getElementById('lblLanguages').textContent = d.lblLanguages;
@@ -521,10 +584,26 @@
       expList.appendChild(jobEl);
     });
 
+    var projectsList = document.getElementById('projectsList');
+    projectsList.innerHTML = '';
+    d.projects.forEach(function(project){
+      var projectEl = el('div', 'job');
+      var head = el('div', 'job-head');
+      var projectLink = project.url ? ' · <a href="'+project.url+'" target="_blank" rel="noopener">'+project.url.replace(/^https?:\/\//, '')+'</a>' : '';
+      head.appendChild(el('div', '', '<span class="job-title">'+project.title+'</span>'+projectLink));
+      head.appendChild(el('div', 'job-dates mono', project.dates));
+      projectEl.appendChild(head);
+      projectEl.appendChild(el('div', 'project-desc', project.description));
+      var ul = el('ul');
+      project.bullets.forEach(function(b){ ul.appendChild(el('li', '', b)); });
+      projectEl.appendChild(ul);
+      projectsList.appendChild(projectEl);
+    });
+
     var eduList = document.getElementById('educationList');
     eduList.innerHTML = '';
     d.education.forEach(function(ed){
-      var item = el('div', 'edu-item');
+      var item = el('div', ed.highlight ? 'edu-item ai-block edu-highlight' : 'edu-item');
       item.appendChild(el('div', 'edu-degree', ed.degree));
       item.appendChild(el('div', 'edu-meta mono', ed.meta));
       if(ed.detail) item.appendChild(el('div', 'edu-detail', ed.detail));
@@ -545,7 +624,8 @@
     var langsList = document.getElementById('langsList');
     langsList.innerHTML = '';
     d.languages.forEach(function(l){
-      langsList.appendChild(el('div', 'lang-item', '<div>'+l.name+'</div><div class="lvl mono">'+l.level+'</div>'));
+      var notes = (l.notes || []).map(function(n){ return '<div class="lang-note">'+n+'</div>'; }).join('');
+      langsList.appendChild(el('div', 'lang-item', '<div>'+l.name+'</div><div class="lvl mono">'+l.level+'</div>'+notes));
     });
 
     document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');

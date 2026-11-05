@@ -5,7 +5,7 @@ Senior Backend Developer & AI Engineer · Granada, España
 franjhr@gmail.com · 647 519 804 · linkedin.com/in/franjhr
 
 ## Perfil profesional
-Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Actualmente Senior Backend Developer en una plataforma SaaS de gestión de RRHH (ATS), donde combino desarrollo, diseño de funcionalidad, revisión de código y mentoring, coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega.
+Ingeniero informático con más de 15 años de experiencia en desarrollo web, especializado en Ruby on Rails. Senior Backend Developer con experiencia en una plataforma SaaS de gestión de RRHH (ATS), combinando desarrollo, diseño de funcionalidad, revisión de código y mentoring, y coordinando el equipo de soporte y mantenimiento de la aplicación. Integro activamente herramientas de IA en el flujo de trabajo para mejorar la calidad y velocidad de entrega. Actualmente curso el Máster AI Engineer de thePower Tech School.
 
 ## Experiencia profesional
 
@@ -29,11 +29,24 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 **Virtual Solutions & Artificial Intelligence S.L. — Coordinador del departamento técnico** · may. 2009 - dic. 2011
 - Coordinación del departamento técnico; diseño y desarrollo de portales web (Python, Django, JSP) para clientes como la Universidad de Granada, incluyendo los proyectos I+D+I INTERFAQ (Junta de Andalucía) y Plan Avanza Competitividad (sistema de vigilancia epidemiológica).
 
+## Proyectos personales
+
+**Mykitker** · [mykitker.com](https://mykitker.com) · oct. 2026 - actualidad
+Plataforma para que creadores de contenido generen su media kit conectando su cuenta de Instagram. En producción y en desarrollo activo; la conexión abierta con Instagram está en revisión por Meta.
+- Diseño, desarrollo y despliegue en solitario, con Claude Code en el flujo de desarrollo.
+- Backend en Django y PostgreSQL, interfaz con HTMX, integración OAuth con la API de Instagram y sincronización de métricas en segundo plano.
+- Infraestructura propia: Docker en VPS, Caddy, Cloudflare, CI con GitHub Actions y copias de seguridad cifradas con restauración probada.
+
+**Tidewiki** · sept. 2026 - actualidad
+Herramienta en Ruby que genera con IA la wiki de un repositorio y la actualiza con cada commit, solo donde cambió el código. En desarrollo; primera versión pública en preparación. Ejemplo real: [github.com/tidewiki-demos/itsdangerous](https://github.com/tidewiki-demos/itsdangerous/tree/main/docs/wiki).
+- Actualización incremental propuesta mediante pull request, con control de coste por ejecución y conservación de las ediciones manuales.
+- Modelo configurable (Claude, OpenAI, Bedrock, Ollama...), con las referencias al código verificadas contra el repositorio y secretos redactados antes de enviar nada al modelo.
+
 ## Formación
+- Máster AI Engineer — thePower Tech School (oct. 2026 - en curso). RAG, agentes, fine-tuning (LoRA/QLoRA), MLOps (MLflow), observabilidad de LLMs (LangFuse/LangSmith) y despliegue en AWS (Bedrock + Lambda).
 - Ingeniería Informática (Licenciatura) — Universidad de Granada (2007-2009). Proyecto fin de carrera: plataforma web de gestión de clubes deportivos (Python/Django) — Matrícula de Honor.
 - Ingeniería Técnica en Informática de Sistemas (Diplomatura) — Universidad de Granada (2003-2007).
 - Certificado de Aptitud Pedagógica (CAP) — Universidad de Granada (2009).
-- Máster AI Engineer — thePower Tech School (oct. 2026 - en curso). RAG, agentes, fine-tuning (LoRA/QLoRA), MLOps (MLflow), observabilidad de LLMs (LangFuse/LangSmith) y despliegue en AWS (Bedrock + Lambda).
 
 ## Aptitudes técnicas
 **Lenguajes y Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
@@ -46,4 +59,6 @@ Ingeniero informático con más de 15 años de experiencia en desarrollo web, es
 
 ## Idiomas
 - Español: nativo
-- Inglés: intermedio
+- Inglés: intermedio (B1)
+  - En curso: EasyPeasyFluent, 5 clases/semana centradas en speaking (hasta ago. 2027)
+  - Objetivo: C1 con certificado IELTS

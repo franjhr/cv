@@ -5,7 +5,7 @@ Senior Backend Developer & AI Engineer · Granada, Spain
 franjhr@gmail.com · +34 647 519 804 · linkedin.com/in/franjhr
 
 ## Professional Summary
-Software engineer with 15+ years of experience in web development, specialized in Ruby on Rails. Currently Senior Backend Developer at an HR management SaaS platform (ATS), combining development, feature design, code review, and mentoring while coordinating the application's support and maintenance team. Actively integrates AI tools into the development workflow to improve delivery quality and speed.
+Software engineer with 15+ years of experience in web development, specialized in Ruby on Rails. Senior Backend Developer with experience on an HR management SaaS platform (ATS), combining development, feature design, code review, and mentoring while coordinating the application's support and maintenance team. Actively integrates AI tools into the development workflow to improve delivery quality and speed. Currently enrolled in the AI Engineer Master's programme at thePower Tech School.
 
 ## Professional Experience
 
@@ -29,11 +29,24 @@ Software engineer with 15+ years of experience in web development, specialized i
 **Virtual Solutions & Artificial Intelligence S.L. — Technical Department Coordinator** · May 2009 - Dec 2011
 - Coordination of the technical department; design and development of web portals (Python, Django, JSP) for clients including the University of Granada, including the R&D&I projects INTERFAQ (Junta de Andalucía) and Plan Avanza Competitividad (epidemiological surveillance system).
 
+## Personal Projects
+
+**Mykitker** · [mykitker.com](https://mykitker.com) · Oct 2026 - present
+Platform that lets content creators build their media kit by connecting their Instagram account. Live and under active development; open Instagram access is under Meta review.
+- Designed, built and deployed solo, with Claude Code in the development workflow.
+- Django and PostgreSQL backend, HTMX interface, OAuth integration with the Instagram API and background metrics sync.
+- Self-managed infrastructure: Docker on a VPS, Caddy, Cloudflare, CI with GitHub Actions and encrypted backups with tested restores.
+
+**Tidewiki** · Sept 2026 - present
+Ruby tool that uses AI to generate a repository's wiki and update it with every commit, only where the code changed. In development; first public release in preparation. Real example: [github.com/tidewiki-demos/itsdangerous](https://github.com/tidewiki-demos/itsdangerous/tree/main/docs/wiki).
+- Incremental updates proposed through a pull request, with a per-run cost limit and manual edits preserved.
+- Configurable model (Claude, OpenAI, Bedrock, Ollama...), with code references checked against the repository and secrets redacted before anything is sent to the model.
+
 ## Education
+- AI Engineer Master's Program — thePower Tech School (Oct 2026 - in progress). RAG, agents, fine-tuning (LoRA/QLoRA), MLOps (MLflow), LLM observability (LangFuse/LangSmith), and deployment on AWS (Bedrock + Lambda).
 - Computer Engineering (BSc/MSc equivalent) — University of Granada (2007-2009). Final project: web platform for sports club management (Python/Django) — Highest Honors.
 - Technical Engineering in Computer Systems — University of Granada (2003-2007).
 - Teaching Certificate (CAP) — University of Granada (2009).
-- AI Engineer Master's Program — thePower Tech School (Oct 2026 - in progress). RAG, agents, fine-tuning (LoRA/QLoRA), MLOps (MLflow), LLM observability (LangFuse/LangSmith), and deployment on AWS (Bedrock + Lambda).
 
 ## Technical Skills
 **Languages & Frameworks**: Ruby on Rails · JavaScript · React · HTML5 / CSS3
@@ -46,4 +59,6 @@ Software engineer with 15+ years of experience in web development, specialized i
 
 ## Languages
 - Spanish: Native
-- English: Intermediate
+- English: Intermediate (B1)
+  - In progress: EasyPeasyFluent, 5 classes/week focused on speaking (until Aug 2027)
+  - Goal: C1 with IELTS certification
